@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+.pnpm
+.pnp.*
+.vscode
+.env
+Dockerfile
+.dockerignore
+npm-debug.log
+.yarn
+.yarnrc
+.pnpm-debug.log
+turbo
