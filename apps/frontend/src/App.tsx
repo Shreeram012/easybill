@@ -1,20 +1,19 @@
 import "./App.css";
-import "./components/landing/Navbar";
-import Navbar from "./components/landing/Navbar";
-import Hero from "./components/landing/Hero";
-import Features from "./components/landing/Features";
-import Filler from "./components/landing/Filler";
-import Footer from "./components/landing/Footer";
+import "./components/Navbar";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Landing from "./pages/Landing";
+import CreateInvoice from "./pages/CreateInvoice";
 
 function App() {
   return (
-    <div className="min-h-screen bg-main flex-col align-middle">
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Features />
-      <Filler />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/create-invoice" element={<CreateInvoice />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
