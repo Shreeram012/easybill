@@ -2,7 +2,7 @@ import logo from "../../public/logo.png";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 flex justify-between items-center w-full p-5 border-b-0 border-gray-200 bg-main shadow-md z-50 h-20">
+    <nav className="fixed top-0 flex justify-between items-center w-full p-5 border-b-0 border-gray-200 bg-main shadow-md z-50 h-20 mb-40">
       <a href="">
         <img src={logo} alt="Easybill Logo" className="" />
       </a>
