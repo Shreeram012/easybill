@@ -81,7 +81,7 @@ const Features: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16">
+    <section className="pb-16">
       <div className="max-w-full mx-32 px-4">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
           Features that make your life easier

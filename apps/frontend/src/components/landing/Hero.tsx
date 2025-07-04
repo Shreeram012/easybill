@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-40 pb-20 bg-[url('../../public/cover.png')] bg-no-repeat bg-cover bg-center mx-36 rounded-xl flex flex-col justify-end" style={{filter:'brightness(0.95)', backgroundOrigin: 'content-box', color: 'white'}}>
+    <section className="min-h-screen pt-20 pb-40 bg-[url('../../public/cover.png')] bg-no-repeat bg-cover bg-center mx-36 rounded-xl flex flex-col justify-end" style={{filter:'brightness(0.95)', backgroundOrigin: 'content-box', color: 'white'}}>
         <div className="mx-8" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 fade-in-up" style={{animationDelay: '0.1s'}}>
             Invoices and accounting made easy
