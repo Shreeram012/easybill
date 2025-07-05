@@ -1,5 +1,5 @@
-import AddItems from '../components/create/AddItems'
-import ClientDetails from '../components/create/ClientDetails'
+import AddItems from '../components/createInvoice/AddItems'
+import ClientDetails from '../components/createInvoice/ClientDetails'
 
 export default function CreateInvoice() {
   return (
