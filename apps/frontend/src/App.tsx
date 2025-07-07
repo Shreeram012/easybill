@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Landing from './pages/Landing'
 import CreateInvoice from './pages/CreateInvoice'
 import CreateItem from './pages/CreateItem'
+import CreateClient from './pages/CreateClient'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/create-invoice" element={<CreateInvoice />} />
           <Route path="/create-item" element={<CreateItem />} />
+          <Route path="/create-client" element={<CreateClient />} />
         </Routes>
       </div>
     </BrowserRouter>
