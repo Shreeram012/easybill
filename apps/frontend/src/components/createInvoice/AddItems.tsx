@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 interface Item {
   category: string
@@ -14,12 +14,12 @@ export default function AddItems() {
     { category: '', code: '', qty: 1, units: '', price: 0, discount: 0 },
   ])
 
-  const handleChange = (index: number, field: keyof Item, value: any) => {
+  const handleChange = <K extends keyof Item>(index: number, field: K, value: Item[K]) => {
     const updated = [...items]
     updated[index][field] =
-      field === 'qty' || field === 'price' || field === 'discount'
+      (field === 'qty' || field === 'price' || field === 'discount'
         ? Number(value)
-        : value
+        : value) as Item[K]
     setItems(updated)
   }
 
@@ -83,7 +83,7 @@ export default function AddItems() {
                   type="number"
                   min={1}
                   value={item.qty}
-                  onChange={(e) => handleChange(idx, 'qty', e.target.value)}
+                  onChange={(e) => handleChange(idx, 'qty', Number(e.target.value))}
                   className="w-16 px-2 py-1 border rounded focus:outline-none focus:ring focus:ring-blue-200 text-right"
                 />
               </td>
@@ -100,7 +100,7 @@ export default function AddItems() {
                   type="number"
                   min={0}
                   value={item.price}
-                  onChange={(e) => handleChange(idx, 'price', e.target.value)}
+                  onChange={(e) => handleChange(idx, 'price', Number(e.target.value))}
                   className="w-20 px-2 py-1 border rounded focus:outline-none focus:ring focus:ring-blue-200 text-right"
                 />
               </td>
@@ -111,7 +111,7 @@ export default function AddItems() {
                   max={100}
                   value={item.discount}
                   onChange={(e) =>
-                    handleChange(idx, 'discount', e.target.value)
+                    handleChange(idx, 'discount', Number(e.target.value))
                   }
                   className="w-16 px-2 py-1 border rounded focus:outline-none focus:ring focus:ring-blue-200 text-right"
                 />
