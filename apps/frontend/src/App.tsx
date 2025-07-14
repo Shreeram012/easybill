@@ -7,6 +7,7 @@ import CreateInvoice from './pages/CreateInvoice'
 import CreateItem from './pages/CreateItem'
 import CreateClient from './pages/CreateClient'
 import Home from './pages/Home'
+import About from './pages/About'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/create-invoice" element={<CreateInvoice />} />
           <Route path="/create-item" element={<CreateItem />} />
           <Route path="/create-client" element={<CreateClient />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>
